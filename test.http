@@ -49,3 +49,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJle
 GET http://localhost:8081/teams
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3NzAyNjEzNjksImlhdCI6MTc3MDE3NDk2OX0.l3OE6lgBlrICvXURslq4vuyPf46DXepJmpWU4qfk0LQ
 
+
+
+### testing messaging service
+POST http://localhost:8082/messages
+Content-Type: application/json
+
+{
+  "team_id": 1,
+  "content": "Hello world"
+}
