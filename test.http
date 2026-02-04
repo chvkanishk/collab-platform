@@ -1,0 +1,51 @@
+// Create a new team
+POST http://localhost:8081/teams
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3NzAyNjEzNjksImlhdCI6MTc3MDE3NDk2OX0.l3OE6lgBlrICvXURslq4vuyPf46DXepJmpWU4qfk0LQ
+Content-Type: application/json
+
+{
+  "name": "My First Team"
+}
+
+
+### Login a user
+POST http://localhost:8081/users/login
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "secret"
+}
+
+
+### Signup a new user
+
+POST http://localhost:8081/users/signup
+Content-Type: application/json
+
+{
+  "email": "second@example.com",
+  "password": "secret"
+}
+
+
+### Adding a member to a team
+POST http://localhost:8081/teams/1/members
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3NzAyNjEzNjksImlhdCI6MTc3MDE3NDk2OX0.l3OE6lgBlrICvXURslq4vuyPf46DXepJmpWU4qfk0LQ
+Content-Type: application/json
+
+{
+  "user_id": 2
+}
+
+
+### List teams for each user
+GET http://localhost:8081/teams
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3NzAyNjEzNjksImlhdCI6MTc3MDE3NDk2OX0.l3OE6lgBlrICvXURslq4vuyPf46DXepJmpWU4qfk0LQ
+
+
+
+### List members of a team
+GET http://localhost:8081/teams
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3NzAyNjEzNjksImlhdCI6MTc3MDE3NDk2OX0.l3OE6lgBlrICvXURslq4vuyPf46DXepJmpWU4qfk0LQ
+
