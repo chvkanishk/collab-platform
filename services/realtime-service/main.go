@@ -96,7 +96,10 @@ func startKafkaConsumer() {
 			continue
 		}
 
+		// msg.Value already contains team_id, channel_id, content
 		fmt.Printf("Received message: %s\n", string(msg.Value))
+
+		// Broadcast the full JSON to all WebSocket clients
 		broadcast <- msg.Value
 	}
 }

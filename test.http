@@ -81,4 +81,31 @@ Content-Type: application/json
   "content": "Hello realtime!"
 }
 
+### testing database service
+POST http://localhost:8082/messages
+{
+  "team_id": 1,
+  "content": "Hello database!"
+}
 
+### testing channel messages
+POST http://localhost:8082/messages
+Content-Type: application/json
+
+{
+  "team_id": 1,
+  "channel_id": 1,
+  "content": "Hello from channel 1!"
+}
+
+
+
+### testing channel messages
+POST http://localhost:8082/messages
+Content-Type: application/json
+
+{
+  "team_id": 1,
+  "channel_id": 3,
+  "content": "Hello from channel 3!"
+}
