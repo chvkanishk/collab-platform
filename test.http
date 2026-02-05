@@ -59,3 +59,17 @@ Content-Type: application/json
   "team_id": 1,
   "content": "Hello world"
 }
+
+
+
+### fetching messages for a team
+POST http://localhost:8082/messages
+Content-Type: application/json
+
+{
+  "team_id": 1,
+  "content": "Hello from Kafka!"
+}
+
+
+
