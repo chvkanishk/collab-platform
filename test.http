@@ -72,4 +72,13 @@ Content-Type: application/json
 }
 
 
+### testing realtime service
+POST http://localhost:8082/messages
+Content-Type: application/json
+
+{
+  "team_id": 1,
+  "content": "Hello realtime!"
+}
+
 
